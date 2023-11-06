@@ -6,9 +6,10 @@ import prafull.springframework.spring6webappassignment.services.GreetingService;
 
 @Controller
 public class SetterInjectedController {
-    @Autowired // Not recommended
     private GreetingService greetingService;
+    @Autowired // Not recommended
     public void setGreetingService(GreetingService greetingService) {
+        System.out.println("SetterInjectedController.setGreetingService");
         this.greetingService = greetingService;
     }
 
